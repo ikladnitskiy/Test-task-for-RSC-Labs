@@ -18,7 +18,7 @@ import org.springframework.stereotype.Repository;
 public class DataRepositoryImpl implements DataRepository {
 
   private final String DB_URL = "jdbc:sqlite:./dataset/data.sqlite";
-  private final String PIVOT_SQL = "SELECT %s AS row, %s AS col, sum(v) AS val FROM source_data GROUP BY 1, 2";
+  private final String PIVOT_SQL = "SELECT %s AS row, %s AS col, SUM(v) AS val FROM source_data GROUP BY 1, 2";
 
   /**
    * Метод возвращает новый Connection.
